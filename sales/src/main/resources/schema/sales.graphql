@@ -1,0 +1,36 @@
+scalar PositiveFloat
+scalar PositiveInt
+scalar DateTime
+scalar Date
+
+type SalesOrderItem {
+	id: ID!
+	quantity: PositiveInt!
+	notes: String
+}
+
+type SalesOrder {
+	id: ID!
+	orderDateTime: DateTime!
+	orderNumber: String!
+}
+
+type Finance {
+	id: ID!
+	baseAmount: PositiveFloat!
+	discountAmount: PositiveFloat!
+	isLoan: Boolean!
+}
+
+type Loan {
+	financeCompany: String!
+	loanAmount: PositiveFloat!
+	contactPerson: ContactPerson!
+}
+
+type ContactPerson {
+	id: ID!
+	name: String!
+	phone: String!
+	email: String!
+}

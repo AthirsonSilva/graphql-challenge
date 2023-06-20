@@ -1,0 +1,12 @@
+type Customer {
+	fullName: String!
+	birthDate: Date!
+	phone: String!
+	email: String!	
+}
+
+type Address {
+	street: String!
+	city: String!
+	zipcode: String!	
+}

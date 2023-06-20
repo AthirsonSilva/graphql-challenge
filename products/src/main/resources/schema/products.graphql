@@ -1,0 +1,70 @@
+scalar PositiveFloat
+scalar PositiveInt
+
+enum TransmissionType {
+	Manual 
+	Automatic
+}
+
+enum BodyType {
+	SUV
+	SENDAN
+	MPV
+}
+
+enum FuelType {
+	DIESEL
+	GAS
+	ELECTRIC
+	HYBRID
+}
+
+type Manufacturer {
+	id: ID!
+	name: String!
+	originCountry: String!
+	description: String
+}
+
+type Series {
+	id: ID!
+	name: String!
+	characteristics: [String!]
+}
+
+type Model {
+	id: ID!
+	name: String!
+	onTheRoadPrice: PositiveFloat!
+	lengthMm: PositiveInt!
+	widthMm: PositiveInt!
+	heightMm: PositiveInt!
+	exteriorColor: String!
+	interiorColor: String!
+	releaseYear: Int!
+	transmission: TransmissionType!
+	doors: PositiveInt!
+	airbags: PositiveInt!
+	isAvailable: Boolean!
+}
+
+type Engine {
+	id: ID!
+	description: String
+	horsePower: PositiveInt!
+	torque: PositiveInt!
+	capacityCC: PositiveInt!
+}
+
+type Feature {
+	id: ID!
+	name: String!
+	activeByDefault: Boolean!
+	activeByRequest: Boolean!
+	installationPrice: PositiveFloat!
+	isSafety: Boolean!
+	isEnterntainment: Boolean!
+	isPerformance: Boolean!
+	isConvenience: Boolean!
+	isDisplay: Boolean!
+}
