@@ -5,7 +5,7 @@ plugins {
 	id 'com.netflix.dgs.codegen' version '5.6.6'
 }
 
-group = 'com.graphql'
+group = 'com.sales'
 version = '0.0.1-SNAPSHOT'
 
 java {

@@ -3,6 +3,7 @@ type Customer {
 	birthDate: Date!
 	phone: String!
 	email: String!	
+	address: Address!
 }
 
 type Address {

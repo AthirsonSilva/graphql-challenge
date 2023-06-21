@@ -13,6 +13,8 @@ type SalesOrder {
 	id: ID!
 	orderDateTime: DateTime!
 	orderNumber: String!
+	salesOrderItems: [SalesOrderItem!]!
+	finance: Finance!
 }
 
 type Finance {
@@ -20,6 +22,7 @@ type Finance {
 	baseAmount: PositiveFloat!
 	discountAmount: PositiveFloat!
 	isLoan: Boolean!
+	loan: Loan
 }
 
 type Loan {

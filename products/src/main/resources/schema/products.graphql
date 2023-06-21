@@ -24,12 +24,14 @@ type Manufacturer {
 	name: String!
 	originCountry: String!
 	description: String
+	series: [Series!]
 }
 
 type Series {
 	id: ID!
 	name: String!
 	characteristics: [String!]
+	models: [Model!]
 }
 
 type Model {
@@ -46,6 +48,8 @@ type Model {
 	doors: PositiveInt!
 	airbags: PositiveInt!
 	isAvailable: Boolean!
+	engine: Engine!
+	features: [Feature!]
 }
 
 type Engine {
