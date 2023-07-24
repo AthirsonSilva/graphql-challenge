@@ -1,5 +1,5 @@
 type Document {
-    uuid            : String!
-    documentType    : String!
-    documentPath    : String!
+  uuid: String!
+  documentType: String!
+  documentPath: String!
 }

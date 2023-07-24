@@ -4,36 +4,36 @@ scalar DateTime
 scalar Date
 
 type SalesOrderItem {
-	id: ID!
-	quantity: PositiveInt!
-	notes: String
+  id: ID!
+  quantity: PositiveInt!
+  notes: String
 }
 
 type SalesOrder {
-	id: ID!
-	orderDateTime: DateTime!
-	orderNumber: String!
-	salesOrderItems: [SalesOrderItem!]!
-	finance: Finance!
+  id: ID!
+  orderDateTime: DateTime!
+  orderNumber: String!
+  salesOrderItems: [SalesOrderItem!]!
+  finance: Finance!
 }
 
 type Finance {
-	id: ID!
-	baseAmount: PositiveFloat!
-	discountAmount: PositiveFloat!
-	isLoan: Boolean!
-	loan: Loan
+  id: ID!
+  baseAmount: PositiveFloat!
+  discountAmount: PositiveFloat!
+  isLoan: Boolean!
+  loan: Loan
 }
 
 type Loan {
-	financeCompany: String!
-	loanAmount: PositiveFloat!
-	contactPerson: ContactPerson!
+  financeCompany: String!
+  loanAmount: PositiveFloat!
+  contactPerson: ContactPerson!
 }
 
 type ContactPerson {
-	id: ID!
-	name: String!
-	phone: String!
-	email: String!
+  id: ID!
+  name: String!
+  phone: String!
+  email: String!
 }

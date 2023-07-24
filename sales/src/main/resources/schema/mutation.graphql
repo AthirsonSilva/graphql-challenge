@@ -1,32 +1,26 @@
 interface MutationResponse {
-    success     : Boolean!
-    message     : String
+  success: Boolean!
+  message: String
 }
 
 type Mutation {
+  addNewCustomer(customer: AddCustomerInput!): CustomerMutationResponse!
 
-    addNewCustomer(
-        customer        : AddCustomerInput!
-    ): CustomerMutationResponse!
+  addAddressesToExistingCustomer(
+    customer: UniqueCustomerInput!
+    addresses: [AddAddressInput!]!
+  ): CustomerMutationResponse!
 
-    addAddressesToExistingCustomer(
-        customer        : UniqueCustomerInput!
-        addresses       : [AddAddressInput!]!
-    ): CustomerMutationResponse!
+  addDocumentToExistingCustomer(
+    customer: UniqueCustomerInput!
+    documentType: String! @NotBlank @Size(max: 30)
+    documentFile: Upload!
+  ): CustomerMutationResponse!
 
-    addDocumentToExistingCustomer(
-        customer        : UniqueCustomerInput!
-        documentType    : String! @NotBlank @Size(max: 30)
-        documentFile    : Upload!
-    ): CustomerMutationResponse!
+  updateExistingCustomer(
+    customer: UniqueCustomerInput!
+    customerUpdate: UpdateCustomerInput!
+  ): CustomerMutationResponse!
 
-    updateExistingCustomer(
-        customer        : UniqueCustomerInput!
-        customerUpdate  : UpdateCustomerInput!
-    ): CustomerMutationResponse!
-
-    addNewSalesOrder(
-        salesOrder      : AddSalesOrderInput!
-    ): SalesOrderMutationResponse
-
+  addNewSalesOrder(salesOrder: AddSalesOrderInput!): SalesOrderMutationResponse
 }

@@ -1,9 +1,7 @@
 type Query {
-
-    customerPagination(
-        customer        : UniqueCustomerInput
-        page            : Int
-        size            : Int
-    ): CustomerPagination
-
+  customerPagination(
+    customer: UniqueCustomerInput
+    page: Int
+    size: Int
+  ): CustomerPagination
 }

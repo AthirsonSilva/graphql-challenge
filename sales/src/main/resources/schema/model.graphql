@@ -1,4 +1,4 @@
 type Model @key(fields: "uuid") {
-    uuid                : String
-    salesPercentage     : NonNegativeFloat
+  uuid: String
+  salesPercentage: NonNegativeFloat
 }

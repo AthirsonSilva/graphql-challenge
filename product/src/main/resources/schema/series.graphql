@@ -1,7 +1,7 @@
 type Series @connection {
-    uuid            : String!
-    name            : String!
-    characteristics : [String!]
-    models          : [Model!]!
-    manufacturer    : Manufacturer
+  uuid: String!
+  name: String!
+  characteristics: [String!]
+  models: [Model!]!
+  manufacturer: Manufacturer
 }
